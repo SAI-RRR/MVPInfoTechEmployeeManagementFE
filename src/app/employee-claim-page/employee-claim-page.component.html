@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Employee Claims</title>
+   
+</head>
+<body >
+    <form >
+    <h3 align="center">Employee Claims Form</h3><br>
+        <table align="center">
+            <tr>
+                <td align="right"> <strong> Employee Name:  </strong></td>
+                <td><input type="text"  id="employeeName" required (ngModel)="claims.name" name="employeeName" required="">  
+                </td><br>
+            </tr><br>
+            <tr>
+                <td align="right"><strong>Claim Amount:  </strong></td>
+                <td ><input type="number" id="Amount" required (ngModel)="claims.claimType" name="claimType" required="">
+                </td>
+            </tr><br>
+            <tr>
+                <td align="right"><strong>Claim Type:  </strong> </td>
+                    <td>
+                    <select id="ddlclaimType"  required (ngModel)="claims.amount" name="amount" >   
+                        <option>--select-- </option>
+                        <option>food</option>
+                        <option>medical</option>
+                        <option>travel</option>
+                        <option>home</option>
+                        </select>
+                </td>  
+            </tr><br>
+            <tr>
+                <td align="right"><strong>Discription:  </strong></td> 
+                <td > <textarea id="claimDescription" rows="4" cols="40" required (ngModel)="claims.description" name="description">             
+                </textarea>
+                </td>
+            </tr><br>
+            <tr>
+                <td align="right"><strong>Receipt:  </strong></td>
+                <td><input type="file" id="Receipt" accept="image/*" required (change)="onFileChanged($event)" name="pic">
+                    </td><br>
+            </tr><br>
+          <tr>
+            <td align="center"> </td>
+                <td>
+                    <button  class="btn btn-success" type="submit" (click)="onSubmit()">Submit Claim</button>
+                </td>
+          </tr>
+        </table>
+    </form>
+</body>
+</html>

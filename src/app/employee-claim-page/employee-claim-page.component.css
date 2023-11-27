@@ -1,0 +1,12 @@
+body{
+    background-color:whitesmoke;
+}
+table{
+    width: auto;
+    padding: 15;
+    margin: auto;
+   /* background: #9a9bb6;*/
+  /* background: skyblue;*/
+  background: lightgray;
+    font-size: 15px;
+}

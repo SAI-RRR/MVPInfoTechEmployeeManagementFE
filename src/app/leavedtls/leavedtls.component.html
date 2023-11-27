@@ -1,0 +1,28 @@
+<h5>Leave Details:</h5>
+<table class="table table-striped">
+    <thead>
+       <tr>
+            <th>EmpName</th>
+            <th>startDate</th>
+            <th>leaveType</th>
+            <th>reason</th>
+            <th>EndDate</th>
+            <th> status</th>
+            <!-- <th>Actions</th> -->
+        </tr>
+    </thead> 
+   <tbody>
+     <tr *ngFor="let employee of leaves">
+            <td>{{employee.empName}}</td>
+            <td>{{employee.startDate}}</td>
+            <td>{{employee.leaveType}}</td>
+            <td>{{employee.reason}}</td>
+            <td>{{employee.endDate}}</td>
+            <td>{{employee.leaveStatus}}</td>
+            <!-- <td>
+                <button (click)="updateEmployee(employee.id)" class="btn btn-info">Update</button>
+                <button (click)="deleteEmployee(employee.id)" class="btn btn-danger" style="margin: left 10px ">Delete</button>
+                
+            </td> -->
+    </tbody> 
+</table>

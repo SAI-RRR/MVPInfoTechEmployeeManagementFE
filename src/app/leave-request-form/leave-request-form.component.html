@@ -1,0 +1,36 @@
+<html>
+<head>
+   
+    <title>Leave Management</title>
+</head>
+<body>
+    <h1>MVP INFO TECH</h1>
+    <div class="container">
+        <h1>Leave Request Form</h1>
+        <form>
+            <label for="employeeName">Employee Name:</label>
+            <input type="text" id="employeeName" [(ngModel)]="employe.empName" name="employeeName" required>
+            
+            <label for="leaveType">Leave Type:</label>
+            <select id="leaveType" [(ngModel)]="employe.leaveType" name="leaveType" required>
+                <option value="Leaves"></option>
+                <option value="sick">Sick Leave</option>
+                <option value="personal">Annual Leave</option>
+                <option value="Compensation">Compensation</option>
+            </select>
+            
+            <label for="startDate">Start Date:</label>
+            <input type="date" id="startDate"  [(ngModel)]="employe.startDate" name="startDate" required>
+            
+            <label for="endDate">End Date:</label>
+            <input type="date" id="endDate"  [(ngModel)]="employe.endDate" name="endDate" required>
+            
+            <label for="reason">Reason:</label>
+            <textarea id="reason" name="reason" [(ngModel)]="employe.reason" rows="4" required></textarea>
+            
+            <button type="submit" (click)="submitRequest()" >Submit Request</button>
+        </form>
+    </div>
+</body>
+</html>
+
